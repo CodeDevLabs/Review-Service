@@ -1,10 +1,10 @@
-package com.deafoodservice.app.reviewservice;
+package com.deafoodservice.app.reviewserice2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ReviewServiceApplicationTests {
+class ReviewSerice2ApplicationTests {
 
     @Test
     void contextLoads() {
