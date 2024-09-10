@@ -2,6 +2,11 @@ package com.foodiehaven.reviewservice.model;
 
 import jakarta.persistence.*;
 
+/**
+ * Represents a review entity in the application.
+ * This class is mapped to the "reviews" table in the database.
+ */
+
 @Entity
 @Table(name = "reviews")
 public class Review {
@@ -16,6 +21,9 @@ public class Review {
     // Constructors, getters, and setters
     public Review() {}
 
+    /**
+     * Constructs a new Review with the given details.
+     */
     public Review(String restaurantName, String foodName, int rating, String review) {
         this.restaurantName = restaurantName;
         this.foodName = foodName;

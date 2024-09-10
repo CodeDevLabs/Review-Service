@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Implementation of the ReviewService interface.
+ * Provides concrete implementations for CRUD operations on Review entities.
+ */
 @Service
 public class ReviewServiceImpl implements ReviewService {
     @Autowired
@@ -34,13 +38,14 @@ public class ReviewServiceImpl implements ReviewService {
         Optional<Review> review = reviewRepository.findById(id);
         if (review.isPresent()) {
             Review existingReview = review.get();
+            // Update the existing review with new details
             existingReview.setRestaurantName(reviewDetails.getRestaurantName());
             existingReview.setFoodName(reviewDetails.getFoodName());
             existingReview.setRating(reviewDetails.getRating());
             existingReview.setReview(reviewDetails.getReview());
             return reviewRepository.save(existingReview);
         }
-        return null;
+        return null;// Return null if the review is not found
     }
 
     @Override
